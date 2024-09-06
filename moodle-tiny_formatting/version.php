@@ -19,13 +19,14 @@
  *
  * @package    tiny_formatting
  * @copyright  2024 Andrew Lyons <andrew@nicols.co.uk>
+ * @copyright  2024 Diego Mena <ingelectronicadj@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component    = 'tiny_formatting';
-$plugin->release      = '1.0';
-$plugin->version      = 2024011900;
+$plugin->release      = '1.0.1';
+$plugin->version      = 2024090601;
 $plugin->requires     = 2022112800.00;
 $plugin->maturity     = MATURITY_STABLE;

@@ -15,10 +15,10 @@ const configureMenu = (menu) => {
     if (menu.format.items.match(/\blanguage\b/)) {
         menu.format.items = menu.format.items.replace(
             /(\blanguage\b)/,
-            ' forecolor backcolor | $1',
+            ' forecolor | $1',
         );
     } else {
-        menu.format.items = `${menu.format.items} | forecolor backcolor`;
+        menu.format.items = `${menu.format.items} | forecolor`;
     }
     //window.console.log(`Finished menu management for ${menu.format.items}`);
     return menu;
@@ -29,6 +29,8 @@ export default new Promise(async (resolve) => {
     resolve([pluginName, {
         configure: (instanceConfig) => ({
             menu: configureMenu(instanceConfig.menu),
+            font_family_formats: 'Verdana=verdana, geneva, sans-serif',
+            font_size_formats: '12pt 14pt 18pt',
         }),
     }]);
 });
